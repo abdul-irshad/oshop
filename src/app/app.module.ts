@@ -13,6 +13,7 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './Admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
 import { Routes, RouterModule } from '@angular/router';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const appRoute:Routes=[
 {path:'',component:HomeComponent},
@@ -41,7 +42,8 @@ const appRoute:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoute),
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
