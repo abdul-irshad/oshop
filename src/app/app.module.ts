@@ -1,3 +1,4 @@
+
 import { LoginComponent } from './login/login.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,8 @@ import { AdminProductsComponent } from './Admin/admin-products/admin-products.co
 import { AdminOrdersComponent } from './Admin/admin-orders/admin-orders.component';
 import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoute:Routes=[
 {path:'',component:HomeComponent},
@@ -24,6 +27,7 @@ const appRoute:Routes=[
 {path:'my-orders',component:MyOrdersComponent},
 {path:'login',component:LoginComponent},
 {path:'admin/products',component:AdminProductsComponent},
+{path:'admin/products/new',component:ProductFormComponent},
 {path:'admin/orders',component:AdminOrdersComponent}
 ];
 
@@ -38,13 +42,15 @@ const appRoute:Routes=[
     OrderSuccessComponent,
     MyOrdersComponent,
     AdminProductsComponent,
-    AdminOrdersComponent
+    AdminOrdersComponent,
+    ProductFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoute),
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
