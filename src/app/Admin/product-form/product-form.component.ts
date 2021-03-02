@@ -2,8 +2,11 @@ import { ProductServiceService } from './../../Shared/product-service.service';
 import { OshopServiceService } from './../../Shared/oshop-service.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+<<<<<<< .merge_file_a11728
 import { FormControl, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+=======
+>>>>>>> .merge_file_a07176
 
 @Component({
   selector: 'app-product-form',
@@ -11,6 +14,7 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./product-form.component.css'],
 })
 export class ProductFormComponent implements OnInit {
+<<<<<<< .merge_file_a11728
   categories$: Observable<any>;
 
   productForm = new FormGroup
@@ -40,4 +44,13 @@ export class ProductFormComponent implements OnInit {
 
       });
   }
+=======
+  categories$:Observable<any>; 
+
+  constructor(private service: OshopServiceService) {}
+
+  ngOnInit() {
+  this.categories$= this.service.getCategory()
+  }
+>>>>>>> .merge_file_a07176
 }
