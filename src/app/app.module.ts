@@ -17,6 +17,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 const appRoute:Routes=[
 {path:'',component:HomeComponent},
@@ -50,7 +53,10 @@ const appRoute:Routes=[
     AppRoutingModule,
     RouterModule.forRoot(appRoute),
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
